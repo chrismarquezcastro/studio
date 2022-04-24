@@ -13,10 +13,10 @@ body {
 }
 
 hr {
-  border-top: 2px dotted rgba(191, 0, 255, 0.126);
+  border-top: 2px dotted rgba(0, 13, 255, 0.199);
   border-bottom: 0;
   width: 66%;
-  margin: 4rem 0;
+  margin: 3rem 0;
 }
 
 h3,
@@ -32,19 +32,19 @@ h1 {
 
 h2 {
   font-family: "Noto Serif", serif;
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 
 h3 {
   font-family: "Bungee Shade", cursive;
   font-size: 2.2rem;
   font-weight: 100;
-  margin: 28px 0;
+  margin: 1rem 0;
   color: #6e7680;
 }
 
 h4 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-style: italic;
   font-weight: 100;
   color: #6e7680;
@@ -63,13 +63,22 @@ p {
 
 .cover {
   display: grid;
-  max-width: 600px;
+  max-width: 800px;
   justify-items: center;
   text-align: center;
 }
 
-.cover img {
+.cover h1,
+small {
+  padding: 0 1rem;
+}
+
+.small-cover-img {
   width: 250px;
+}
+
+.large-cover-img {
+  max-width: 600px;
 }
 
 .section {
@@ -80,8 +89,8 @@ p {
 }
 
 .section > h3 {
-  padding-left: 1rem;
   text-align: center;
+  margin: 0;
 }
 
 .slide {
@@ -90,7 +99,7 @@ p {
 }
 
 .slide-left-column {
-  padding: 0 1rem;
+  padding: 12px 1rem 0;
 }
 
 .slide-left-column h4 {
@@ -131,6 +140,10 @@ video {
 /* Media query: smaller than 880px */
 
 @media (max-width: 880px) {
+  .large-cover-img {
+    max-width: 66%;
+  }
+
   .slide {
     grid-template-columns: 1fr;
     justify-items: center;
@@ -155,7 +168,7 @@ video {
 
   .slide-right-column img {
     max-width: 100%;
-    padding: 2.5rem 0;
+    padding: 1.5rem 0;
   }
 
   .slide-right-column video {
