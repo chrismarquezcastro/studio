@@ -61,15 +61,83 @@ p {
   font-weight: 300;
 }
 
+a {
+  text-decoration: none;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 3rem;
+  background-color: rgba(255, 255, 255, 0.96);
+  display: grid;
+  align-content: center;
+  grid-template-columns: 8rem 10rem auto;
+  text-align: center;
+  padding-left: 1rem;
+  box-shadow: 0 1rem 1rem whitesmoke;
+}
+
+nav a,
+div {
+  color: black;
+}
+
+nav a:hover {
+  color: rgb(0, 128, 255);
+}
+
+.selected-nav {
+  border-bottom: 1.5px solid rgba(0, 13, 255, 0.199);
+  padding-bottom: 0.8rem;
+}
+
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  z-index: 1;
+  background-color: white;
+  text-align: left;
+}
+
+.dropdown-content div {
+  margin: 1rem;
+}
+
+.dropdown-content a {
+  line-height: 1.5;
+  color: rgb(0, 128, 255);
+}
+
+.dropdown-content a:hover {
+  text-decoration: underline;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  cursor: pointer;
+}
+
 .cover {
   display: grid;
   max-width: 800px;
   justify-items: center;
   text-align: center;
+  margin-top: 5rem;
 }
 
 .cover h1,
-small {
+.cover small,
+.cover h2 {
   padding: 0 1rem;
 }
 
@@ -77,8 +145,12 @@ small {
   width: 250px;
 }
 
-.large-cover-img {
+.large-cover-img img {
   max-width: 600px;
+}
+
+.home-cover-img img {
+  max-width: 404px;
 }
 
 .section {
@@ -90,7 +162,7 @@ small {
 
 .section > h3 {
   text-align: center;
-  margin: 0;
+  margin: 0 1rf;
 }
 
 .slide {
@@ -104,6 +176,10 @@ small {
 
 .slide-left-column h4 {
   padding: 0;
+}
+
+.slide-left-column small {
+  text-align: left;
 }
 
 .slide-right-column {
@@ -135,12 +211,24 @@ video {
     max-width: 90%;
     padding: 2.5rem 1rem;
   }
+
+  .home-cover-img img {
+    width: 50%;
+  }
 }
 
 /* Media query: smaller than 880px */
 
 @media (max-width: 880px) {
+  .slide-left-column h2 {
+    text-align: center;
+  }
+
   .large-cover-img {
+    max-width: 66%;
+  }
+
+  .home-cover-img img {
     max-width: 66%;
   }
 
